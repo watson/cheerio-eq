@@ -12,7 +12,7 @@ is normally to use the `.eq()` function instead:
 
 ```js
 // this will not work:
-$('div:eq(1)`);
+$('div:eq(1)');
 
 // use this instead:
 $('div').eq(1);
