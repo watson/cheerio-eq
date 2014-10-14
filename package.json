@@ -1,0 +1,30 @@
+{
+  "name": "cheerio-eq",
+  "version": "0.0.0",
+  "description": "Add :eq() selector functionality to cheerio",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/watson/cheerio-eq.git"
+  },
+  "keywords": [
+    "cheerio",
+    "jquery",
+    "css",
+    "selector",
+    "eq"
+  ],
+  "author": "Thomas Watson Steen <w@tson.dk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/watson/cheerio-eq/issues"
+  },
+  "homepage": "https://github.com/watson/cheerio-eq",
+  "devDependencies": {
+    "cheerio": "^0.17.0",
+    "tape": "^3.0.0"
+  }
+}
