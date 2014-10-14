@@ -20,7 +20,7 @@ $('div').eq(1);
 
 This is a good alternative if you write the CSS selectors from scrach,
 but what if you are working with selectors that already contain `:eq()`?
-*Don't fear, cheerio-eq is here :)*
+**Don't fear, cheerio-eq is here :)**
 
 ## Solution
 
