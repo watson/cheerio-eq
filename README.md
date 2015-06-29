@@ -4,6 +4,11 @@ Add `:eq()` selector functionality to [cheerio](https://github.com/cheeriojs/che
 
 [![build status](https://secure.travis-ci.org/watson/cheerio-eq.png)](http://travis-ci.org/watson/cheerio-eq)
 
+**If you are looking for a more advanced solution with support for
+multiple advanved selectors, check out the
+[cheerio-advanced-selectors](https://github.com/watson/cheerio-advanced-selectors)
+module.**
+
 ## What's the problem?
 
 Cheerio sacrifices advanced CSS selector support for speed. This means
