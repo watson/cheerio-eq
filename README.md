@@ -26,7 +26,7 @@ but what if you are working with selectors that already contain `:eq()`?
 
 The solution to the problem is to automatically parse the selector
 string at run-time. So if you give cheerio-eq a selector like
-`div:eq(1)` it will return the following cheerio curser:
+`div:eq(1)` it will return the following cheerio cursor:
 `$('div').eq(1)`.
 
 It also works for complex selectors, so that `div:eq(1) h2:eq(0) span`
