@@ -47,15 +47,15 @@ npm install cheerio-eq
 ## Usage
 
 ```js
-var cheerio = require('cheerio');
-var find = require('cheerio-eq');
+var eq = require('cheerio-eq');
+var cheerio = eq.wrap(require('cheerio'));
 
 var html = '<div>foo</div><div>bar</div>';
 var selector = 'div:eq(1)';
 
 var $ = cheerio.load(html);
 
-console.log(find($, selector).text()); // => 'bar'
+console.log($(selector).text()); // => 'bar'
 ```
 
 ## API
@@ -65,6 +65,8 @@ arguments:
 
 1. The cheerio DOM object (usually just named `$`)
 1. A string containing the selector to parse
+
+Alternatively, you can use the `wrap` method to extend cheerio.
 
 ## License
 

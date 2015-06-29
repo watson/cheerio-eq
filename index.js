@@ -1,15 +1,17 @@
 'use strict';
 
-var regex = /^(.*?)(?:\:eq\((\d+)\))(.*)/;
+var regex = /^(.*?)(?:(?:\:(first))|(?:\:(last))|(?:\:eq\((\d+)\)))(.*)/;
 
-module.exports = function ($, selector) {
+var cheerioEq = function ($, selector) {
   var parts = [];
   var match;
 
   while (match = selector.match(regex)) {
     parts.push(match[1]);
-    parts.push(parseInt(match[2], 10));
-    selector = match[3].trim();
+    if (match[2]) parts.push(0);
+    else if (match[3]) parts.push(-1);
+    else parts.push(parseInt(match[4], 10));
+    selector = match[5].trim();
   }
   parts.push(selector);
 
@@ -24,3 +26,20 @@ module.exports = function ($, selector) {
 
   return cursor;
 };
+
+// wrap cheerio, exposing the new API.
+cheerioEq.wrap = function($) {
+  var original = $.load;
+
+  $.load = function(body) {
+    var parsed = original(body);
+
+    return function(selector) {
+      return cheerioEq(parsed, selector);
+    }
+  }
+
+  return $;
+}
+
+module.exports = cheerioEq;
