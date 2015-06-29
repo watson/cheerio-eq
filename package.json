@@ -1,6 +1,6 @@
 {
   "name": "cheerio-eq",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add :eq() selector functionality to cheerio",
   "main": "index.js",
   "scripts": {
@@ -26,5 +26,9 @@
   "devDependencies": {
     "cheerio": "^0.17.0",
     "tape": "^3.0.0"
-  }
+  },
+  "coordinates": [
+    18.4786129,
+    -69.9548908
+  ]
 }
